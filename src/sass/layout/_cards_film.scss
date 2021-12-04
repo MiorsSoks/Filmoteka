@@ -1,0 +1,56 @@
+.gallery-card{
+    display: flex;
+    flex-direction: column;
+   
+    width: 280px;
+    height: 439px;
+
+
+      @media screen and (min-width: 768px) {
+        width: 294px;
+        height: 398px;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+    
+      @media screen and (min-width: 1024px) {
+        width: 274px;
+        height: 398px;
+
+      }
+}
+
+.gallery-art{
+    width: 280px;
+    height: 398px;
+
+    text-decoration: none;
+    border-radius: 5px;
+    
+      @media screen and (min-width: 1024px) {
+        width: 274px;
+        height: 398px;
+      }
+    
+}
+
+.film-description{
+    padding-top: 10px;
+}
+
+.film-name{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    text-transform: uppercase;
+
+}
+
+.film-info{
+    color: var(--text-orange);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+
+}

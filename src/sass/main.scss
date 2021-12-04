@@ -2,5 +2,14 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-@import './header';
+@import "./utils/variables";
+
+@import "./base/common";
+@import "./base/container";
+
+@import "./components/section";
+
+@import "./layout/cards_film";
+
 @import "./modal_window";
+@import './header';
