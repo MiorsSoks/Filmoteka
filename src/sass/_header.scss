@@ -1,0 +1,85 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerImg/hall-mob.jpg);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 320px;
+  height: 230px;
+  background-size: 320px 230px;
+  background-color: var(--bgc-hero-footer);
+  }
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerImg/hall-mob@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) { 
+  .header {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerImg/hall-tab.jpg);
+    max-width: 768px;
+    // height: 230px;
+    background-size: 768px 230px;  
+  }
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerImg/hall-tab@2x.jpg);
+  }
+}
+}
+@media screen and (min-width: 1024px) {
+  .header {  
+    max-width: 1024px;
+    // height: 230px;
+    background-size: 1024px 230px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerImg/cinema-hallDes.jpg); 
+    }
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header {
+      // background-color: rgba(0, 0, 0, 0.56);      
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/headerImg/cinema-hall2хDes.jpg);
+    }
+  }
+}
+.header {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+.header-nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.header-btn{
+  display: flex;
+}
