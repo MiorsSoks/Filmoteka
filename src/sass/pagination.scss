@@ -1,0 +1,27 @@
+.tui-page-btn {
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.5s;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  font-style: normal;
+  background-color: #fff;
+}
+
+.tui-is-selected {
+  background-color: #ff6b08;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.tui-page-btn:hover {
+  transform: scale(0.2);
+  background-color: #ffe0b5;
+}

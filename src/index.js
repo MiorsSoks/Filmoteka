@@ -1,4 +1,4 @@
 import './sass/main.scss';
 
 
-import "./js/tuiPagination"
+import "./js/pagination"
