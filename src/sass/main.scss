@@ -2,13 +2,13 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-@import 'material-icons/iconfont/material-icons.css';
+@import '../../node_modules/material-icons/iconfont/material-icons.css';
 @import './utils/variables';
 @import './base/common';
 @import './base/container';
 @import './components/section';
-@import "./modal_window";
+@import './modal_window';
 @import './layout/header';
 @import './layout/cards_film';
-@import './header';
+@import './layout/header';
 @import './pagination';
