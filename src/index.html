@@ -17,7 +17,13 @@
   <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
   <include src="./partials/header.html"></include>
   <include src="./partials/modal_window.html"></include>
-  <include src="./partials/film_card.html"></include>
+  <section class="container gallery-section">
+      <ul class="list gallery-container">
+        <include src="./partials/film_cards.html"></include>
+      </ul>
+  </section>
+
+  
   <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
   <script src="./index.js"></script>
 </body>
