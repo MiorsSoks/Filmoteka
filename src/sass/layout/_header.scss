@@ -4,7 +4,7 @@
   justify-content: center;  
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/hall-mob.jpg);
   text-align: center;
   margin: 0 auto;
@@ -18,13 +18,13 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .header {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/hall-mob@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) { 
   .header {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/hall-tab.jpg);
     max-width: 768px; 
     background-size: 768px 230px;  
@@ -34,7 +34,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .header {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/hall-tab@2x.jpg);
   }
 }}
@@ -42,7 +42,7 @@
   .header {  
     max-width: 1024px; 
     background-size: 1024px 230px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/cinema-hallDes.jpg); 
     }
     @media (min-device-pixel-ratio: 2),
@@ -51,7 +51,7 @@
     (min-resolution: 2dppx) {
     .header {
       // background-color: rgba(0, 0, 0, 0.56);      
-      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url(../images/header-img/cinema-hall2хDes.jpg);
     }
   }
@@ -159,7 +159,7 @@
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
-  padding: 0px;
+  padding: 0 0 1px 0;
 }
 .header-btn--current::after {
   position: absolute;
