@@ -1,13 +1,14 @@
+//Ссылка на доки библиотеки  https://github.com/nhn/tui.pagination/blob/production/docs/getting-started.md 
+
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
 
 const container = document.getElementById('pagination');
 
 
 const options = {
-  totalItems: 11,
-  itemsPerPage: 10,
-  visiblePages: 10,
+  totalItems: 40,
+  itemsPerPage: 20,
+  visiblePages: 7,
   page: 1,
   centerAlign: false,
   firstItemClassName: 'tui-first-child',
@@ -29,4 +30,5 @@ const options = {
       '</a>'
   }
 };
+
 const pagination = new Pagination(container, options);
