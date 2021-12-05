@@ -1,23 +1,29 @@
 <header class="header">
+  <div class="header-conreiner">
   <nav class="header-nav">
-    <a href="" class="header-logo">
-      <svg width="24" height="24">
+    <a href="../src/index.html" class="header-logo link">
+      <svg width="24" height="24">`
         <use href="./images/icon.svg#icon-film"></use>
       </svg>
-      <h1 class="header__title visually-hidden">Filmoteka</h1>
+      <h1 class="header__title">Filmoteka</h1>
     </a>
-    <div class="header-btn">
-      <button class="header-btn__home" type="submit">HOME</button>
-      <button class="header-btn__library" type="submit">MY LIBRARY</button>
+    <div class="header-btn__conteiner">
+      <button class="header-btn" type="submit">HOME</button>
+      <button class="header-btn header-btn__library" type="submit">MY LIBRARY</button>
     </div>
   </nav>
-  <div class="header-form">
+  <form class="header-form">
     <input
-          type="search"
+          type="text"
           class="header-form__film-name"         
           name="film-name"
           required          
           placeholder="Поиск фильмов"
-          id="film-name">
-  </div>  
+          id="film-name"
+          aria-label="search">
+    <button class="header-btn__form" type="submit">
+      <span class="material-icons-outlined">search</span>
+    </button>
+  </form>
+  </div> 
 </header>

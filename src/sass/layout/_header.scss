@@ -1,8 +1,3 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 .header{
   display: flex;
   align-items: center;
@@ -31,8 +26,7 @@ img {
   .header {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/header-img/hall-tab.jpg);
-    max-width: 768px;
-    // height: 230px;
+    max-width: 768px; 
     background-size: 768px 230px;  
   }
   @media (min-device-pixel-ratio: 2),
@@ -43,12 +37,10 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/header-img/hall-tab@2x.jpg);
   }
-}
-}
+}}
 @media screen and (min-width: 1024px) {
   .header {  
-    max-width: 1024px;
-    // height: 230px;
+    max-width: 1024px; 
     background-size: 1024px 230px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/header-img/cinema-hallDes.jpg); 
@@ -64,22 +56,117 @@ img {
     }
   }
 }
-.header {
-  max-width: 1024px;
+.header-conreiner{
+  width: 280px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .header-conreiner{
+    width: 618px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-conreiner{
+  width: 882px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}}
 .header-nav{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .header-logo{
   display: flex;
   align-items: center;
   justify-content: center;  
 }
-.header-btn{
+.header-form__film-name{
+  width: 280px;
+  height: 20px;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--white);  
+  outline: none;
+  color: var(--white); 
+}
+@media screen and (min-width: 768px){
+  .header-form__film-name{
+    width: 336px;
+  }
+}
+.header-form__film-name::placeholder {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 16px;
+}
+.header-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 37px;
+}
+.header-btn__form {
+  position: absolute; 
+  transform: translateX(400%);
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px){
+  .header-btn__form {
+    transform: translateX(500%);
+  }
+}
+.material-icons-outlined {
+  color: var(--white);
+  font-size: 16px;
+}
+.header__title{
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .header__title{
+  display: block;
+  margin-left: 10px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--white);
+}}
+.header-btn__conteiner{
   display: flex;
 }
+.header-btn__library {
+  margin-left: 39px;
+}
+.header-btn {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;  
+  color: var(--white);
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+// .nav__link--current::after {
+//   position: absolute;
+//   content: '';
+//   display: block;
+//   width: 100%;
+//   height: 4px;
+//   background-color: var(--accent-color);
+//   border-radius: 2px;
+//   left: 0;
+//   bottom: 0;  
+// }
