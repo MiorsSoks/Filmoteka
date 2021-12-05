@@ -3,15 +3,12 @@
  * Все паршалы подключаются сюда.
  */
 @import 'material-icons/iconfont/material-icons.css';
-
-@import "./utils/variables";
-
-@import "./base/common";
-@import "./base/container";
-
-@import "./components/section";
-
-@import "./layout/cards_film";
-
+@import './utils/variables';
+@import './base/common';
+@import './base/container';
+@import './components/section';
 @import "./modal_window";
 @import './layout/header';
+@import './layout/cards_film';
+@import './header';
+@import './pagination';
