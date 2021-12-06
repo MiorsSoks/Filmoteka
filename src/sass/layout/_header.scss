@@ -143,13 +143,13 @@
   line-height: 35px;
   color: var(--white);
 }}
-.header-btn__conteiner{
+.header-link__conteiner{
   display: flex;
 }
-.header-btn__library {
+.header-link__library {
   margin-left: 39px;
 }
-.header-btn {
+.header-link {
   position: relative;
   font-family: Roboto;
   font-weight: 500;
@@ -161,7 +161,7 @@
   cursor: pointer;
   padding: 0 0 1px 0;
 }
-.header-btn--current::after {
+.header-link--current::after {
   position: absolute;
   content: '';
   display: block;
