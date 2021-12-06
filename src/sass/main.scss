@@ -2,16 +2,15 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-@import './footer';
+@import './layout/footer';
 @import '../../node_modules/material-icons/iconfont/material-icons.css';
 @import './utils/variables';
 @import './base/common';
 @import './base/container';
 @import './components/section';
-@import './modal_window';
+@import './layout/modal_window';
 @import './layout/header';
 @import './layout/cards_film';
 @import './layout/header';
-@import './pagination';
-@import "./layout/header-labrary";
-
+@import './layout/pagination';
+@import './layout/header-labrary';
