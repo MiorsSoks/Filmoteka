@@ -1,3 +1,3 @@
 import './sass/main.scss';
-import "./js/pagination"
-
+import './js/pagination'
+import './js/up-btn'

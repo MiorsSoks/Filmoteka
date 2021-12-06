@@ -1,45 +1,45 @@
 body {
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: 500;
-    color: var(--black);
-    background: var(--color-background);
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  ul,
-  ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .link {
-    text-decoration: none;
-  }
-  
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--black);
+  background: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
 //   /* h2 */
 //   .main-title {
 //     font-family: var(--main-font);
@@ -49,18 +49,18 @@ body {
 //     line-height: 30px;
 //     color: var(--blue);
 //     text-transform: uppercase;
-  
+
 //     @media screen and (min-width: 768px) {
 //       font-size: 36px;
 //       line-height: 45px;
 //     }
-  
+
 //     @media screen and (min-width: 1444px) {
 //       font-size: 48px;
 //       line-height: 60px;
 //     }
 //   }
-  
+
 //   /* h3 */
 //   .second-title {
 //     font-family: var(--main-font);
@@ -70,18 +70,18 @@ body {
 //     line-height: 23px;
 //     color: var(--blue);
 //     text-transform: uppercase;
-  
+
 //     @media screen and (min-width: 768px) {
 //       font-size: 24px;
 //       line-height: 30px;
 //     }
-  
+
 //     @media screen and (min-width: 1444px) {
 //       font-size: 36px;
 //       line-height: 45px;
 //     }
 //   }
-  
+
 //   /* основной текст */
 //   .common-text {
 //     font-family: var(--main-font);
@@ -90,7 +90,7 @@ body {
 //     font-size: 16px;
 //     line-height: 20px;
 //     color: var(--black);
-  
+
 //     @media screen and (min-width: 1444px) {
 //       font-size: 18px;
 //       line-height: 23px;
