@@ -1,9 +1,9 @@
-      import {fetchMovie} from './find_movie';
+import {fetchMovie} from './find_movie';
 
-const search_form = document.querySelector('#search-form');
+const search_form = document.querySelector('.header-form');
 
 search_form.addEventListener('submit', (e) => {
-  const value = search_form.elements.searchQuery.value;
+  const value = search_form.elements.appellation.value;
   if (value.trim() === '') {
     e.preventDefault();
     return;

@@ -1,29 +1,31 @@
 <header class="header">
   <div class="header-conreiner">
-  <nav class="header-nav">
-    <a href="../src/index.html" class="header-logo link">
-      <svg width="24" height="24">`
-        <use href="./images/icon.svg#icon-film"></use>
-      </svg>
-      <h1 class="header__title">Filmoteka</h1>
-    </a>
-    <div class="header-link__conteiner">
-      <a href="../src/index.html" class="header-link header-link--current link">HOME</a>
-      <a href="../src/library.html" class="header-link header-link__library link">MY LIBRARY</a>
-    </div>
-  </nav>
-  <form class="header-form">
-    <input
-          type="text"
-          class="header-form__film-name"         
-          name="film-name"
-          required          
-          placeholder="Поиск фильмов"
-          id="film-name"
-          aria-label="search">
-    <button class="header-btn__form" type="submit">
-      <span class="material-icons-outlined">search</span>
-    </button>
-  </form>
-  </div> 
+    <nav class="header-nav">
+      <a href="../src/index.html" class="header-logo link">
+        <svg width="24" height="24">
+          `
+          <use href="./images/icon.svg#icon-film"></use>
+        </svg>
+        <h1 class="header__title">Filmoteka</h1>
+      </a>
+      <div class="header-link__conteiner">
+        <a href="../src/index.html" class="header-link header-link--current link">HOME</a>
+        <a href="../src/library.html" class="header-link header-link__library link">MY LIBRARY</a>
+      </div>
+    </nav>
+    <form class="header-form">
+      <input
+        type="text"
+        class="header-form__film-name"
+        name="appellation"
+        required
+        placeholder="Поиск фильмов"
+        id="film-name"
+        aria-label="search"
+      />
+      <button class="header-btn__form" type="submit">
+        <span class="material-icons-outlined">search</span>
+      </button>
+    </form>
+  </div>
 </header>
