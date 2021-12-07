@@ -1,3 +1,4 @@
+import { getGenresNames } from './getGenresNames';
 const filmList = document.querySelector('.gallery-container');
 
 export function renderMarkup(movies) {
@@ -6,6 +7,11 @@ export function renderMarkup(movies) {
 }
 
 function createMarkup({ poster_path, title, genre_ids, release_date, popularity }) {
+  getGenresNames().then(data => {
+    data.genres.map(genreObject => {
+      console.log(genreObject);
+    });
+  });
   return `<li class="gallery-container__item">
     <div class="gallery-card">
         <a href="" class="link gallery-art">
@@ -25,8 +31,8 @@ function createMarkup({ poster_path, title, genre_ids, release_date, popularity 
             <h2 class="film-name">${title}</h2>
             <div class="film-info">
                 <p class="genres">${genre_ids}</p>
-                <p class="year">${release_date}</p>
-                <p class="rating">${popularity}</p>
+                <p class="year">${release_date.slice(0, 4)}</p>
+                <p class="rating">${popularity.toFixed(1)}</p>
             </div>
     
         </div>
