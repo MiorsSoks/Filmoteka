@@ -86,7 +86,8 @@
   border-color: transparent;
   border-bottom-color: var(--white);  
   outline: none;
-  color: var(--white); 
+  color: var(--white);
+  padding-bottom: 4px;
 }
 @media screen and (min-width: 768px){
   .header-form__film-name{
