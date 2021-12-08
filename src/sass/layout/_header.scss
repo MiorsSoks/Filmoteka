@@ -159,3 +159,14 @@
   left: 0;
   bottom: 0;   
 }
+.header-search__error{
+  margin-top: 22px;
+  color: #FF001B;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+}
+.header-search__error-hidden{
+  display: none;
+}
