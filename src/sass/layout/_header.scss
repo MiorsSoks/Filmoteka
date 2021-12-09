@@ -9,7 +9,7 @@
   margin: 0 auto;
   max-width: 320px;
   height: 230px;
-  background-size: 320px 230px;
+  background-size: 320px 230px; 
   background-color: var(--bgc-hero-footer);
   }
   @media (min-device-pixel-ratio: 2),
@@ -86,7 +86,8 @@
   border-color: transparent;
   border-bottom-color: var(--white);  
   outline: none;
-  color: var(--white); 
+  color: var(--white);
+  padding-bottom: 4px;
 }
 @media screen and (min-width: 768px){
   .header-form__film-name{
