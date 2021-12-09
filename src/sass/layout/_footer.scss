@@ -79,6 +79,8 @@
   border: 2px solid #fae3cd;
 }
 .footer-backdrop {
+  z-index: 1;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -92,6 +94,7 @@
   //   visibility (duration) (timing-function);
 }
 .footer-modal {
+  z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -179,6 +182,7 @@
   margin-top: 10px;
 
   @media screen and (min-width: 768px) {
+    flex-direction: column;
     padding: 0 10px;
     text-align: center;
     justify-content: center;
