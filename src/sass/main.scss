@@ -2,6 +2,18 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './layout/footer';
+@import '../../node_modules/material-icons/iconfont/material-icons.css';
+@import './utils/variables';
+@import './base/common';
+@import './base/container';
+@import './components/section';
+@import './layout/spinner';
+@import './layout/modal_window';
+@import './layout/header';
+@import './layout/cards_film';
+@import './layout/header';
+@import './components/modal';
+@import './layout/pagination';
+@import './layout/header-labrary';
+@import './layout/btn-up';

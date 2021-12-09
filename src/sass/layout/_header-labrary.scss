@@ -1,0 +1,87 @@
+.header-library{
+  padding-top: 41px;
+  display: flex;  
+  justify-content: center;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-img/library-hallmob.jpg);  
+  margin: 0 auto;
+  max-width: 320px;
+  height: 230px;
+  background-size: 320px 230px;
+  background-color: var(--bgc-hero-footer);
+  }
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header-library {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-img/library-hallmob@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) { 
+  .header-library {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-img/library-halltab.jpg);
+    max-width: 768px; 
+    background-size: 768px 230px;  
+  }
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header-library {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-img/library-halltab@2x.jpg);
+  }
+}}
+@media screen and (min-width: 1024px) {
+  .header-library {  
+    max-width: 1024px; 
+    background-size: 1024px 230px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-img/library-hall.jpg); 
+    }
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header-library {           
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/library-hall@2x.jpg);
+    }
+  }
+}
+.header-btn__conteiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;  
+}
+.header-btn{
+  width: 136px;
+  height: 44px;
+  background-color: transparent;  
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header-btn--current {
+  background-color: var(--orange-button);  
+  border-color: transparent;
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+}
+.header-btn__queue{
+  margin-left: 19px;
+}
+@media screen and (min-width: 768px) {
+  .header-btn__queue{
+    margin-left: 15px;
+  }
+}

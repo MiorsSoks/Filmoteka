@@ -1,0 +1,228 @@
+.footer-section {
+  background-color: var(--color-footer);
+}
+.footer-container {
+  padding-top: 30px;
+  padding-bottom: 28px;
+}
+.footer-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 9px;
+  color: var(--text-footer);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-item {
+    margin-bottom: 0;
+  }
+}
+.footer-item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 0.5px;
+  height: 14px;
+  background-color: var(--text-footer);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.footer-icon {
+  display: inline-block;
+  align-items: baseline;
+  margin: 0 10px;
+}
+
+.footer-btn {
+  padding: 8px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.footer-cross {
+  display: block;
+  fill: gray;
+}
+
+.footer-link,
+.footer-text {
+  color: var(--text-footer);
+}
+.footer-link:focus,
+.footer-link:hover {
+  color: var(--text-orange);
+}
+.footer-btn:focus .footer-cross,
+.footer-btn:hover .footer-cross {
+  fill: #fae3cd;
+}
+.footer-btn:focus,
+.footer-btn:hover {
+  transform: scale(1.25);
+  border: 2px solid #fae3cd;
+}
+.footer-backdrop {
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  // transition: opacity (duration) (timing-function),
+  //   visibility (duration) (timing-function);
+}
+.footer-modal {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+
+  background: linear-gradient(90deg, #fae3cd, #f58134);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 618px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 852px;
+    padding: 30px;
+  }
+}
+
+.footer-title {
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  color: gray;
+  text-shadow: 2px 1px rgb(201, 200, 200);
+}
+
+.team-list {
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
+}
+
+.team-item {
+  margin: 20px 10px;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 5 - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+  }
+}
+
+.team-img {
+  display: none;
+  border-radius: 50%;
+  margin: 0;
+  border: 3px solid gray;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 90px;
+    height: 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.team-member {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+    width: 100%;
+  }
+}
+.member-name {
+  color: var(--text-footer);
+  font-size: 12;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    // padding: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    // padding: 15px;
+  }
+}
+.team-role {
+  color: var(--text-footer);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+
+  @media screen and (min-width: 768px) {
+    padding: 5px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
