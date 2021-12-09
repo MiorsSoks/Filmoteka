@@ -1,5 +1,6 @@
 import { fetchCollection } from "./bring_trend_collection";
+import { renderCollection } from "./create_render_collection";
 
 window.addEventListener('load', () => {
-    fetchCollection();
+    fetchCollection().then(renderCollection);
 });
