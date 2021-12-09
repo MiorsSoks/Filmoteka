@@ -16,11 +16,9 @@
 
   window.addEventListener('keydown', (e) => {
    if (e.key === 'Escape') {
-      console.log("keydown")
-      toggleModal()  
+      refs.modal.classList.add('is-hidden');
     }
   })
-
 
   refs.back.addEventListener('click',toggleModal)
   
