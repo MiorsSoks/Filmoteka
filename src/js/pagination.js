@@ -1,10 +1,10 @@
-//Ссылка на доки библиотеки  https://github.com/nhn/tui.pagination/blob/production/docs/getting-started.md 
-  import axios from 'axios';
+//Ссылка на доки библиотеки  https://github.com/nhn/tui.pagination/blob/production/docs/getting-started.md
+import axios from 'axios';
 import Pagination from 'tui-pagination';
 // import {renderMarkup} from './create_markup'
 const container = document.getElementById('pagination');
 
-const API_KEY = 'api_key=3b94c1b54af7d429587ecf26a37007c0'
+const API_KEY = 'api_key=3b94c1b54af7d429587ecf26a37007c0';
 const PER_PAGE = 20;
 
 const options = {
@@ -18,7 +18,7 @@ const options = {
 };
 const pagination = new Pagination(container, options);
 
-const page = pagination.getCurrentPage()
+const page = pagination.getCurrentPage();
 console.log(page);
 
 fetchMovie(page).then(({ total_results, total_pages }) => {
@@ -26,14 +26,15 @@ fetchMovie(page).then(({ total_results, total_pages }) => {
   pagination.reset(total_pages);
 });
 
-async function fetchMovie( value, page) {
+async function fetchMovie(value, page) {
   // const value =  document.getElementById("film-name").value;
   try {
-    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?${API_KEY}&language=en-US&query=${value}&page=${page}^&per_page=${PER_PAGE}&include_adult=false`);
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?${API_KEY}&language=en-US&query=${value}&page=${page}^&per_page=${PER_PAGE}&include_adult=false`,
+    );
     return response.data;
-    } catch (error) {
-      console.error(error);
-    }        
-};
-  pagination.on('afterMove', ({ page }) => console.log(page));
-
+  } catch (error) {
+    console.error(error);
+  }
+}
+pagination.on('afterMove', ({ page }) => console.log(page));

@@ -21,13 +21,16 @@
   <include src="./partials/header.html"></include>
 
   <main>
-
-    <section class="container gallery-section">
-      <ul class="list gallery-container">
-        <include src="./partials/film_cards.html"></include>
-      </ul>
-      <div id="pagination" class="tui-pagination"></div>
-    </section>
+  <include src="./partials/modal_window.html"></include>
+    <section class="gallery-section">
+        <div class="container">
+          <ul class="list gallery-container">
+            <include src="./partials/film_cards.html"></include>
+          </ul>
+          <div id="pagination" class="tui-pagination"></div>
+        </div>
+      
+      </section>
   </main>
   <include src="./partials/footer.html"></include>
   <include src="./partials/up-btn.html"></include>

@@ -12,7 +12,6 @@ export async function fetchMovie(value) {
       button_search.setAttribute('disabled', true);
       return;
     }
-
     return response.data;
   } catch (error) {
     console.error(error);
