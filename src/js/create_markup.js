@@ -11,7 +11,7 @@ export function renderMarkup(movies) {
 
 function createMarkup({ poster_path, title, genre_ids, release_date, popularity }) {
   return `<li class="gallery-container__item">
-        <a href="" class="link gallery-art">
+        <a href="" class="link gallery-art" data-modal-open>
             <div class="film-img">
                             <picture>
                                 <source media="(min-width: 1024px)"
