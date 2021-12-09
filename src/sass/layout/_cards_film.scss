@@ -7,6 +7,12 @@
   height: 439px;
   margin-bottom: 20px;
 }
+
+.poster {
+  border-radius: 5px;
+  height: 398px;
+}
+
 .film-description {
   padding: 5px;
   padding-top: 10px;
@@ -14,6 +20,7 @@
 
 .film-name {
   font-family: var(--main-font);
+  color: var(--black);
   font-weight: 500;
   font-size: 12px;
   line-height: 1.16;
