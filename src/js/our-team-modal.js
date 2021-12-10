@@ -1,10 +1,10 @@
 (() => {
   const refs = {
-    openModal: document.querySelector('[data-footer-modal-open]'),
-    closeModalBtn: document.querySelector('[data-footer-modal-close]'),
-    modal: document.querySelector('[data-footer-modal]'),
-    back: document.querySelector('.footer-backdrop'),
-    m:document.querySelector('.footer-modal'),
+    openModal: document.querySelector('[data-team-modal-open]'),
+    closeModalBtn: document.querySelector('[data-team-modal-close]'),
+    modal: document.querySelector('[data-team-modal]'),
+    back: document.querySelector('.team-backdrop'),
+    m:document.querySelector('.team-modal'),
   };
 
   refs.openModal.addEventListener('click', toggleModal);
