@@ -3,7 +3,7 @@ import { renderCollection } from './create_render_collection';
 import { renderMarkup } from './create_markup';
 
 window.addEventListener('load', () => {
-  fetchCollection().then(data => {
-    renderMarkup(data.results);
-  });
+    fetchCollection().then(data => {
+        renderCollection(data.results);
+      });
 });

@@ -7,9 +7,8 @@ const noPosterImg = 'https://sd.keepcalms.com/i/sorry-no-picture-available-2.png
 
 export function renderMarkup(movies) {
   const markup = movies.map(movie => createMarkup(movie)).join('');
-  filmList.insertAdjacentHTML('beforeend', markup);
+  return filmList.insertAdjacentHTML('beforeend', markup);  
 }
-
 function createMarkup({
   poster_path,
   title,
@@ -20,7 +19,6 @@ function createMarkup({
   name,
 }) {
   changeGenresIdsToNames(genre_ids);
-
   return `<li class="gallery-container__item">
         <a href="" class="link gallery-art" data-modal-open>
             <div class="film-img">
