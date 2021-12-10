@@ -1,4 +1,4 @@
-import { getGenresNames } from './getGenresNames';
+import { changeGenresIdsToNames } from './change_genres_ids';
 const filmList = document.querySelector('.gallery-container');
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p';
@@ -6,10 +6,19 @@ const SIZE_IMG = '/w500';
 
 export function renderCollection(movies) {
   const markup = movies.map(movie => createMarkupColl(movie)).join('');
-  return filmList.innerHTML = markup;  
+  return (filmList.innerHTML = markup);
 }
 
-function createMarkupColl({ poster_path, title, genre_ids, release_date, vote_average, first_air_date, name }) {
+function createMarkupColl({
+  poster_path,
+  title,
+  genre_ids,
+  release_date,
+  vote_average,
+  first_air_date,
+  name,
+}) {
+  changeGenresIdsToNames(genre_ids);
   return `<li class="gallery-container__item">
         <a href="" class="link gallery-art" data-modal-open>
             <div class="film-img">
@@ -35,7 +44,9 @@ function createMarkupColl({ poster_path, title, genre_ids, release_date, vote_av
  <div class="film-description">
       <h2 class="film-name">${title ? title : name}</h2>
       <div class="film-info">
-          <p class="genres">${genre_ids}</p>
+          <p class="genres">${
+            genre_ids.length > 2 ? genre_ids.slice(0, 2) + `<span>,Other</span>` : genre_ids
+          }</p>
           <p class="year">${release_date ? release_date.slice(0, 4) : first_air_date.slice(0, 4)}
           </p>
           <p class="rating">${vote_average}</p>
