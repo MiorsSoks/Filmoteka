@@ -27,7 +27,7 @@ fetchCollection(page).then(({total_pages, page, results}) => {
 
 
   paginationTrend.on('afterMove', ({page}) => {console.log("eeeeeeettt", page)  
-  fetchCollection(page).then(data => renderCollection(data));
+  fetchCollection(page).then(data => renderCollection(data.results));
 });
 
 export async function fetchCollection(page) {
