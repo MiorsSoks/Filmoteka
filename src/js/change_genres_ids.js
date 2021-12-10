@@ -1,12 +1,11 @@
 const savedGenres = localStorage.getItem('allGenres');
 const arrayOfAllGenres = JSON.parse(savedGenres);
-console.log(arrayOfAllGenres);
 
-export function changeGenresIdsToNames(movieIds) {
-  for (let i = 0; i < movieIds.length; i++) {
+export function changeGenresIdsToNames(movieGenresIds) {
+  for (let i = 0; i < movieGenresIds.length; i++) {
     arrayOfAllGenres.forEach(objectGenre => {
-      if (movieIds[i] === objectGenre.id) {
-        movieIds[i] = objectGenre.name;
+      if (movieGenresIds[i] === objectGenre.id) {
+        movieGenresIds[i] = objectGenre.name;
       }
     });
   }
