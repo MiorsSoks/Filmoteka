@@ -6,10 +6,10 @@ const SIZE_IMG = '/w500';
 
 export function renderMarkup(movies) {
   const markup = movies.map(movie => createMarkup(movie)).join('');
-  filmList.insertAdjacentHTML('beforeend', markup);
+  return filmList.insertAdjacentHTML('beforeend', markup);  
 }
 
-function createMarkup({ poster_path, title, genre_ids, release_date, popularity }) {
+function createMarkup({ poster_path, title, genre_ids, release_date, vote_average, first_air_date, name }) {
   return `<li class="gallery-container__item">
         <a href="" class="link gallery-art" data-modal-open>
             <div class="film-img">
@@ -33,11 +33,12 @@ function createMarkup({ poster_path, title, genre_ids, release_date, popularity 
                             </picture>
             </div>
  <div class="film-description">
-      <h2 class="film-name">${title}</h2>
+      <h2 class="film-name">${title ? title : name}</h2>
       <div class="film-info">
           <p class="genres">${genre_ids}</p>
-          <p class="year">${release_date.slice(0, 4)}</p>
-          <p class="rating">${popularity.toFixed(1)}</p>
+          <p class="year">${release_date ? release_date.slice(0, 4) : first_air_date.slice(0, 4)}
+          </p>
+          <p class="rating">${vote_average}</p>
       </div>
     
         </div>
