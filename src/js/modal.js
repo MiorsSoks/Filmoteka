@@ -6,7 +6,7 @@
     back: document.querySelector(".backdrop"),
     m: document.querySelector('.container-wind'), 
   };
-
+console.log(refs);
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   
@@ -18,7 +18,8 @@
 
   function toggleModal(event) {
         event.preventDefault();
-      refs.modal.classList.toggle('is-hidden');
+    refs.modal.classList.toggle('is-hidden');
+    console.log('hahaha');
   }
   
   window.addEventListener('keydown', (e) => {
