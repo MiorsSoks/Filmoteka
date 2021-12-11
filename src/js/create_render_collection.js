@@ -1,8 +1,9 @@
 import { changeGenresIdsToNames } from './change_genres_ids';
-const filmList = document.querySelector('.gallery-container');
 
+const filmList = document.querySelector('.gallery-container');
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p';
 const SIZE_IMG = '/w500';
+const noPosterImg = 'https://sd.keepcalms.com/i/sorry-no-picture-available-2.png';
 
 export function renderCollection(movies) {
   const markup = movies.map(movie => createMarkupColl(movie)).join('');
@@ -24,20 +25,34 @@ function createMarkupColl({
             <div class="film-img">
                             <picture>
                                 <source media="(min-width: 1024px)"
-                                    srcset="${BASE_IMG_URL + SIZE_IMG + poster_path} 1x, ${
-    BASE_IMG_URL + SIZE_IMG + poster_path
+                                    srcset="${
+                                      poster_path === null
+                                        ? noPosterImg
+                                        : BASE_IMG_URL + SIZE_IMG + poster_path
+                                    } 1x, ${
+    poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
   } 2x">
                                 <source media="(min-width: 768px)"
-                                    srcset="${BASE_IMG_URL + SIZE_IMG + poster_path} 1x, ${
-    BASE_IMG_URL + SIZE_IMG + poster_path
+                                    srcset="${
+                                      poster_path === null
+                                        ? noPosterImg
+                                        : BASE_IMG_URL + SIZE_IMG + poster_path
+                                    } 1x, ${
+    poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
   } 2x">
                                 <source media="(min-width: 320px)"
-                                    srcset="${BASE_IMG_URL + SIZE_IMG + poster_path} 1x, ${
-    BASE_IMG_URL + SIZE_IMG + poster_path
+                                    srcset="${
+                                      poster_path === null
+                                        ? noPosterImg
+                                        : BASE_IMG_URL + SIZE_IMG + poster_path
+                                    } 1x, ${
+    poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
   } 2x">
-                            
+
                                 <img class="poster" src="${
-                                  BASE_IMG_URL + SIZE_IMG + poster_path
+                                  poster_path === null
+                                    ? noPosterImg
+                                    : BASE_IMG_URL + SIZE_IMG + poster_path
                                 }" alt="Poster of movie">
                             </picture>
             </div>
@@ -47,11 +62,12 @@ function createMarkupColl({
           <p class="genres">${
             genre_ids.length > 2 ? genre_ids.slice(0, 2) + `<span>,Other</span>` : genre_ids
           }</p>
-          <p class="year">${release_date ? release_date.slice(0, 4) : first_air_date.slice(0, 4)}
-          </p>
+          <p class="year">${
+            release_date ? release_date.slice(0, 4) : first_air_date.slice(0, 4)
+          }</p>
           <p class="rating">${vote_average}</p>
       </div>
-    
+
         </div>
         </a>
 </li>`;
