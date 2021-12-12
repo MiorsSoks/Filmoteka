@@ -1,4 +1,4 @@
-import { onQueueBtnClick, onWatchedBtnClick } from './watched';
+
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
