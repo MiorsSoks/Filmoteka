@@ -17,6 +17,7 @@ function createMarkup({
   vote_average,
   first_air_date,
   name,
+  id,
 }) {
   changeGenresIdsToNames(genre_ids);
   return `<li class="gallery-container__item">
@@ -48,11 +49,9 @@ function createMarkup({
     poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
   } 2x">
 
-                                <img class="poster" src="${
-                                  poster_path === null
-                                    ? noPosterImg
-                                    : BASE_IMG_URL + SIZE_IMG + poster_path
-                                }" alt="Poster of movie">
+                                <img class="poster" id='${id}' src="${
+    poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
+  }" alt="Poster of movie">
                             </picture>
             </div>
  <div class="film-description">
