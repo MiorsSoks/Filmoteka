@@ -21,7 +21,7 @@ search_form.addEventListener('submit', e => {
   setPagination (value)
   });  
 });
-console.log(value)
+// console.log(value)
 
 const API_KEY = 'api_key=3b94c1b54af7d429587ecf26a37007c0'
 const PER_PAGE = 20;
@@ -36,7 +36,7 @@ const options = {
 };
 const pagination = new Pagination(container, options);
 const page = pagination.getCurrentPage()
-console.log("page", page);
+// console.log("page", page);
 
 function setPagination (value) {
   pagination.on('afterMove', ({page}) => {console.log("eeeeeee", page)
