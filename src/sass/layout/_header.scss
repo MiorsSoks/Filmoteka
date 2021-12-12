@@ -21,7 +21,7 @@
     url(../images/header-img/hall-mob@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 320px) { 
   .header {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/hall-tab.jpg);
@@ -87,7 +87,7 @@
   border-bottom-color: var(--white);  
   outline: none;
   color: var(--white);
-  padding-bottom: 4px;
+  padding-bottom: 4px;   
 }
 @media screen and (min-width: 768px){
   .header-form__film-name{
@@ -98,6 +98,15 @@
   color: var(--white);
   font-size: 14px;
   line-height: 16px;
+  background-color: transparent;   
+}
+.header-form__film-name,
+.header-form__film-name:hover, 
+.header-form__film-name:focus, 
+.header-form__film-name:active {
+  box-shadow: inset 0 0 0 50px rgb(0, 0, 0);
+  -webkit-text-fill-color: #fff;
+  border-color:black black  var(--white) black;
 }
 .header-form {
   display: flex;
