@@ -1,5 +1,6 @@
 .dark {
   background-color: #3c3a3a;
+  transition: background-color 0.3s;
 }
 
 .material-icons {
@@ -31,5 +32,5 @@
 
 .dark img:hover {
   box-shadow: 0 14px 20px rgb(250, 247, 247);
-  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
 }
