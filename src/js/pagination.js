@@ -10,7 +10,7 @@ const search_form = document.querySelector('.header-form');
 
 search_form.addEventListener('submit', e => {
   e.preventDefault();
-  value = search_form.elements.appellation.value;
+  value = search_form.elements.appellation.value.trim();
   console.log(value)
 
   fetchMoviePagination(value, page).then(({ total_results, total_pages }) => {
