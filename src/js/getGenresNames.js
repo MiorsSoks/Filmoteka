@@ -15,6 +15,4 @@ export async function getGenresNames() {
 getGenresNames().then(data => {
   localStorage.setItem('allGenres', JSON.stringify(data.genres));
 });
-const savedGenres = localStorage.getItem('allGenres');
-const arrayOfAllGenres = JSON.parse(savedGenres);
-console.log(arrayOfAllGenres);
+

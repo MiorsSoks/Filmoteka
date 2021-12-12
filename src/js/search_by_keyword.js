@@ -1,4 +1,4 @@
-import { fetchMovie } from './find_movie';
+import { fetchMovie } from './bring_movie';
 import { renderMarkup } from './create_markup';
 
 const search_form = document.querySelector('.header-form');

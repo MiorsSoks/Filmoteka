@@ -17,22 +17,21 @@
 <body>
   <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
   <include src="./partials/spinner.html"></include>
-  <include src="./partials/modal_window.html"></include>
   <include src="./partials/header.html"></include>
  
   <main>
-  <include src="./partials/modal_window.html"></include>
-    <section class="gallery-section">
+     <section class="gallery-section">
         <div class="container">
-          <ul class="list gallery-container">
+          <ul class="list gallery-container" data-modal-open>
             <include src="./partials/film_cards.html"></include>
           </ul>
           <div id="pagination" class="tui-pagination"></div>
         </div>
-      
       </section>
   </main>
   <include src="./partials/footer.html"></include>
+  <include src="./partials/modal_window.html"></include>
+  <include src="./partials/our-team-modal.html"></include>
   <include src="./partials/up-btn.html"></include>
 
   <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
