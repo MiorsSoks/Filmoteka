@@ -1,3 +1,4 @@
+import { onQueueBtnClick, onWatchedBtnClick } from './watched';
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -26,4 +27,5 @@ console.log(refs);
       refs.modal.classList.add('is-hidden');
     }
   })
+
 })();

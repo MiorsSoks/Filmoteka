@@ -15,3 +15,4 @@ export async function getGenresNames() {
 getGenresNames().then(data => {
   localStorage.setItem('allGenres', JSON.stringify(data.genres));
 });
+
