@@ -12,8 +12,8 @@ const refs = {
 }
 
 refs.library.addEventListener('click', onLibraryClick);
-refs.queueBtn.addEventListener('click', onQueueBtnClick);
-refs.watchedBtn.addEventListener('click', onWatchedBtnClick);
+// refs.queueBtn.addEventListener('click', onQueueBtnClick);
+// refs.watchedBtn.addEventListener('click', onWatchedBtnClick);
 
 
 let queueList = [];
