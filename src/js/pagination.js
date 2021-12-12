@@ -17,7 +17,7 @@ search_form.addEventListener('submit', e => {
     console.log('total_results', total_results);
     pagination.reset(total_pages);
 
-  fetchMoviePagination(value, page).then(data => renderCollection(data))
+  fetchMoviePagination(value, page).then(data => renderCollection(data.results))
   setPagination (value)
   });  
 });
@@ -40,7 +40,7 @@ const page = pagination.getCurrentPage()
 
 function setPagination (value) {
   pagination.on('afterMove', ({page}) => {console.log("eeeeeee", page)
-  fetchMoviePagination(value, page).then(data => renderCollection(data));
+  fetchMoviePagination(value, page).then(data => renderCollection(data.results));
 });
 }
 

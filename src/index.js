@@ -8,3 +8,4 @@ import './js/spinner';
 import './js/search_trend_collection';
 import './js/watched';
 import './js/libraryBtns';
+import "./js/markup-modal";

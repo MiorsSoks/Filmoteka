@@ -7,7 +7,7 @@ import { onQueueBtnClick, onWatchedBtnClick } from './watched';
     back: document.querySelector(".backdrop"),
     m: document.querySelector('.container-wind'), 
   };
-
+console.log(refs);
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   
@@ -19,8 +19,8 @@ import { onQueueBtnClick, onWatchedBtnClick } from './watched';
 
   function toggleModal(event) {
         event.preventDefault();
-      refs.modal.classList.toggle('is-hidden');
-  }
+    refs.modal.classList.toggle('is-hidden');
+    }
   
   window.addEventListener('keydown', (e) => {
    if (e.key === 'Escape') {

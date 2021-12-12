@@ -12,4 +12,4 @@ export async function fetchFilmInfo() {
     } catch (error) {
       console.error(error);
     }
-  }m
+  }
