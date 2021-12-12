@@ -1,96 +1,98 @@
-.header{ 
+.header {
   display: flex;
-  padding-top: 41px;  
-  justify-content: center;  
+  padding-top: 41px;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/header-img/hall-mob.jpg);  
+    url(../images/header-img/hall-mob.jpg);
   margin: 0 auto;
   max-width: 320px;
   height: 230px;
-  background-size: 320px 230px; 
+  background-size: 320px 230px;
   background-color: var(--bgc-hero-footer);
-  }
-  @media (min-device-pixel-ratio: 2),
+}
+@media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .header {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/header-img/hall-mob@2x.jpg);
+      url(../images/header-img/hall-mob@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .header {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/header-img/hall-tab.jpg);
-    max-width: 768px; 
-    background-size: 768px 230px;  
+      url(../images/header-img/hall-tab.jpg);
+    max-width: 768px;
+    background-size: 768px 230px;
   }
   @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .header {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/header-img/hall-tab@2x.jpg);
-  }
-}}
-@media screen and (min-width: 1024px) {
-  .header {      
-    max-width: 1024px; 
-    background-size: 1024px 230px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/header-img/cinema-hallDes.jpg); 
-    }
-    @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .header {         
+    .header {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/header-img/cinema-hall2хDes.jpg);
+        url(../images/header-img/hall-tab@2x.jpg);
     }
   }
 }
-.header-conreiner{  
+@media screen and (min-width: 1024px) {
+  .header {
+    max-width: 1024px;
+    background-size: 1024px 230px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/cinema-hallDes.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header-img/cinema-hall2хDes.jpg);
+    }
+  }
+}
+.header-conreiner {
   width: 280px;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .header-conreiner{
+  .header-conreiner {
     width: 618px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .header-conreiner{
-  width: 882px;
-}}
-.header-nav{  
+  .header-conreiner {
+    width: 882px;
+  }
+}
+.header-nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header-logo{
+.header-logo {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
-.header-form__film-name{
+.header-form__film-name {
   width: 280px;
   height: 20px;
   background-color: transparent;
   border-color: transparent;
-  border-bottom-color: var(--white);  
+  border-bottom-color: var(--white);
   outline: none;
   color: var(--white);
   padding-bottom: 4px;
 }
-@media screen and (min-width: 768px){
-  .header-form__film-name{
+@media screen and (min-width: 768px) {
+  .header-form__film-name {
     width: 336px;
   }
 }
@@ -107,13 +109,13 @@
   margin-top: 37px;
 }
 .header-btn__form {
-  position: absolute; 
+  position: absolute;
   transform: translateX(400%);
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .header-btn__form {
     transform: translateX(500%);
   }
@@ -122,18 +124,19 @@
   color: var(--white);
   font-size: 16px;
 }
-.header__title{
+.header__title {
   display: none;
 }
-@media screen and (min-width: 768px){
-  .header__title{
-  display: block;
-  margin-left: 10px;
-  font-size: 30px;
-  line-height: 35px;
-  color: var(--white);
-}}
-.header-link__conteiner{
+@media screen and (min-width: 768px) {
+  .header__title {
+    display: block;
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--white);
+  }
+}
+.header-link__conteiner {
   display: flex;
 }
 .header-link__library {
@@ -142,7 +145,7 @@
 .header-link {
   position: relative;
   font-size: 12px;
-  line-height: 14px;  
+  line-height: 14px;
   color: var(--white);
   background-color: transparent;
   border-color: transparent;
@@ -158,16 +161,16 @@
   background-color: var(--text-orange);
   border-radius: 2px;
   left: 0;
-  bottom: 0;   
+  bottom: 0;
 }
-.header-search__error{
+.header-search__error {
   margin-top: 22px;
-  color: #FF001B;
+  color: #ff001b;
   font-size: 14px;
   line-height: 16px;
   display: flex;
   justify-content: center;
 }
-.header-search__error-hidden{
+.header-search__error-hidden {
   display: none;
 }

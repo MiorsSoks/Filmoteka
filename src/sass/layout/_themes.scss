@@ -1,0 +1,35 @@
+.dark {
+  background-color: #3c3a3a;
+}
+
+.material-icons {
+  font-size: 23px;
+  color: var(--white);
+}
+
+.material-icons:hover {
+  color: var(--text-orange);
+}
+
+.theme {
+  position: absolute;
+  top: 190px;
+  right: 220px;
+}
+
+.dark .footer-section {
+  background-color: var(--black);
+}
+
+.dark .up-btn__icon {
+  fill: var(--white);
+}
+
+.up-btn__icon:hover {
+  fill: var(--orange-button);
+}
+
+.dark img:hover {
+  box-shadow: 0 14px 20px rgb(250, 247, 247);
+  transition: box-shadow 0.5s ease-in-out;
+}
