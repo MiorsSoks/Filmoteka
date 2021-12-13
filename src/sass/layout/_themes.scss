@@ -30,8 +30,13 @@
   fill: var(--orange-button);
 }
 
-.dark img:hover {
+.dark .poster:hover {
   box-shadow: 0 4px 20px rgb(250, 247, 247);
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.poster:hover {
+  box-shadow: 0 7px 35px rgb(241, 173, 84);
   transition: box-shadow 0.4s ease-in-out;
 }
 
