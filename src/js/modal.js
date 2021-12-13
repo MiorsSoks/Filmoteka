@@ -9,6 +9,7 @@ import { fetchFilmInfo } from './bring_film_info';
     m: document.querySelector('.container-wind'),
   };
 
+
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -23,10 +24,16 @@ import { fetchFilmInfo } from './bring_film_info';
     if (event.target.tagName !== 'IMG') {
       return;
     }
+    let idFilm = event.target.id;
     toggleModal();
-    fetchFilmInfo(event.target.id).then(data => {
+    fetchFilmInfo(idFilm).then(data => {
       renderModalFilm(data);
     });
+    let watchedBtn = document.querySelector('button[data-name="watched"]');
+    let queueBtn = document.querySelector('button[data-name="queue"]');
+    checkQueueBtn(queueBtn, idFilm);
+    checkWatchedBtn(watchedBtn, idFilm);
+    refs.modal.setAttribute('id', idFilm);
   }
 
   function toggleModal() {
@@ -38,4 +45,17 @@ import { fetchFilmInfo } from './bring_film_info';
       refs.modal.classList.add('is-hidden');
     }
   });
+
+  let queueList = [];
+  let watchedList = [];
+
+  function checkQueueBtn(btn, id) {
+    if (!localStorage.getItem('queueList')) return;
+    let queueList = JSON.parse(localStorage.getItem('queueList'));
+
+  }
+  function checkWatchedBtn(btn, id) {
+    if (!localStorage.getItem('watchedList')) return;
+    let watchedList = JSON.parse(localStorage.getItem('watchedList'));
+  }
 })();

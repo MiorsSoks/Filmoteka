@@ -75,7 +75,7 @@ function createModalMarkup({
         <p class="modal_tex">"${overview}"</p>       
     </div>
         <div class="mw">
-        <button class="modal_btn_l modal_btn add-to-watched" type="button">add to Watched</button>
-        <button class="modal_btn_r modal_btn add-to-queue" type="button">add to queue</button>
+        <button class="modal_btn_l modal_btn add-to-watched" type="submit">add to Watched</button>
+        <button class="modal_btn_r modal_btn add-to-queue" type="submit">add to queue</button>
     </div>`;
 }

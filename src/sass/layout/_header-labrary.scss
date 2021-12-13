@@ -72,7 +72,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.header-btn--current {
+.header-btn.header-btn--current {
   background-color: var(--orange-button);  
   border-color: transparent;
   filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
