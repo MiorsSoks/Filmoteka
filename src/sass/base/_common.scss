@@ -35,6 +35,11 @@ img {
   // // border-radius: 5px;
 }
 
+img:hover {
+  box-shadow: 0 7px 35px rgb(241, 173, 84);
+  transition: box-shadow 0.4s ease-in-out;
+}
+
 .list {
   list-style: none;
   padding: 0;

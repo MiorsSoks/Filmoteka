@@ -2,7 +2,7 @@ import { renderModalFilm } from './markup-modal';
 import { fetchFilmInfo } from './bring_film_info';
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtn: document.querySelector('.list.gallery-container'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
     back: document.querySelector('.backdrop'),
@@ -21,19 +21,14 @@ import { fetchFilmInfo } from './bring_film_info';
 
   function onOpenModalClick(event) {
     event.preventDefault();
-    if (event.target.tagName !== 'IMG') {
+    if (event.target.parentNode.classList.contains('container')) {
       return;
     }
-    let idFilm = event.target.id;
     toggleModal();
-    fetchFilmInfo(idFilm).then(data => {
+    const id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
+    fetchFilmInfo(id).then(data => {
       renderModalFilm(data);
     });
-    let watchedBtn = document.querySelector('button[data-name="watched"]');
-    let queueBtn = document.querySelector('button[data-name="queue"]');
-    checkQueueBtn(queueBtn, idFilm);
-    checkWatchedBtn(watchedBtn, idFilm);
-    refs.modal.setAttribute('id', idFilm);
   }
 
   function toggleModal() {
