@@ -7,8 +7,9 @@ import { fetchFilmInfo } from './bring_film_info';
     modal: document.querySelector('[data-modal]'),
     back: document.querySelector('.backdrop'),
     m: document.querySelector('.container-wind'),
+    watchedBtn: document.querySelector('.add-to-watched'),
+    queueBtn: document.querySelector('.add-to-queue'),
   };
-
 
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
   refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -24,12 +25,16 @@ import { fetchFilmInfo } from './bring_film_info';
     if (event.target.parentNode.classList.contains('container')) {
       return;
     }
+    console.log(refs.watchedBtn);
+    console.log(refs.queueBtn);
     toggleModal();
     const id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
     fetchFilmInfo(id).then(data => {
       renderModalFilm(data);
     });
   }
+  // console.log(refs.watchedBtn);
+  // console.log(refs.queueBtn);
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
@@ -47,7 +52,6 @@ import { fetchFilmInfo } from './bring_film_info';
   function checkQueueBtn(btn, id) {
     if (!localStorage.getItem('queueList')) return;
     let queueList = JSON.parse(localStorage.getItem('queueList'));
-
   }
   function checkWatchedBtn(btn, id) {
     if (!localStorage.getItem('watchedList')) return;
