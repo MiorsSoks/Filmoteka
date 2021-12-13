@@ -49,6 +49,7 @@ async function fetchMoviePagination(value, page) {
     return response.data
   } else {
     errorText.classList.toggle("header-search__error-hidden")
+    
   }
     } catch (error) {
       console.error(error);
