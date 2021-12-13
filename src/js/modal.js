@@ -9,6 +9,7 @@ import { fetchFilmInfo } from './bring_film_info';
     m: document.querySelector('.container-wind'),
   };
 
+
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -39,4 +40,17 @@ import { fetchFilmInfo } from './bring_film_info';
       refs.modal.classList.add('is-hidden');
     }
   });
+
+  let queueList = [];
+  let watchedList = [];
+
+  function checkQueueBtn(btn, id) {
+    if (!localStorage.getItem('queueList')) return;
+    let queueList = JSON.parse(localStorage.getItem('queueList'));
+
+  }
+  function checkWatchedBtn(btn, id) {
+    if (!localStorage.getItem('watchedList')) return;
+    let watchedList = JSON.parse(localStorage.getItem('watchedList'));
+  }
 })();

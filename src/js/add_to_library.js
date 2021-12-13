@@ -1,0 +1,82 @@
+import { refs} from './modal'
+let queueList = [];
+let watchedList = [];
+
+// addModalWatched = document.querySelector('.add-to-watched');
+// addModalQueue = document.querySelector('.add-to-queue');
+refs.modal.addEventListener('submit', onModalClick);
+
+console.log(modal);
+
+function onModalClick(e) {
+  let movieId = refs.modal.getAttribute('id');
+  if (e.target.dataset.name === 'queue') {
+    onQueueBtnClick(movieId, e.target);
+  }
+  if (e.target.dataset.name === 'watched') {
+    onWatchedBtnClick(movieId, e.target);
+  }
+  console.log('modal');
+}
+
+function onQueueBtnClick(id, btn) {
+  if (!localStorage.getItem('queueList')) {
+    addToQueueList(id, btn);
+    return;
+  }
+  queueList = JSON.parse(localStorage.getItem('queueList'));
+  if (queueList.includes(id)) {
+    removeFromQueueList(id, btn);
+  } else {
+    addToQueueList(id, btn);
+  }
+}
+
+function addToQueueList(id, btn) {
+  queueList.push(id);
+  localStorage.setItem('queueList', JSON.stringify(queueList));
+  btn.style.backgroundColor = '#ff6b01';
+  btn.style.color = '#ffffff';
+  btn.style.borderColor = '#ff6b01';
+}
+
+function removeFromQueueList(id, btn) {
+  const index = queueList.indexOf(`${id}`);
+  queueList.splice(index, 1);
+  // queueList.pop(id);
+  localStorage.setItem('queueList', JSON.stringify(queueList));
+  btn.style.backgroundColor = '#ffffff';
+  btn.style.color = '#000000';
+  btn.style.borderColor = '#000000';
+}
+
+function onWatchedBtnClick(id, btn) {
+  if (!localStorage.getItem('watchedList')) {
+    addToWatchedList(id, btn);
+    return;
+  }
+  queueList = JSON.parse(localStorage.getItem('watchedList'));
+  if (watchedList.includes(id)) {
+    removeFromWatchedList(id, btn);
+  } else {
+    addToWatchedList(id, btn);
+  }
+}
+
+function addToWatchedList(id, btn) {
+  watchedList.push(id);
+  localStorage.setItem('watchedList', JSON.stringify(watchedList));
+  btn.style.backgroundColor = '#ff6b01';
+  btn.style.color = '#ffffff';
+  btn.style.borderColor = '#ff6b01';
+}
+
+function removeFromWatchedList(id, btn) {
+  const index = watchedList.indexOf(`${id}`);
+  watchedList.splice(index, 1);
+  // watchedList.pop(id);
+  localStorage.setItem('watchedList', JSON.stringify(watchedList));
+  btn.style.backgroundColor = '#ffffff';
+  btn.style.color = '#000000';
+  btn.style.borderColor = '#000000';
+}

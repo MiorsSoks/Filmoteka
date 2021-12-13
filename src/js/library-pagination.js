@@ -8,7 +8,7 @@ btnLibrary.addEventListener("click", handlerLibray)
 
 function handlerLibray (event) {
   search_form.removeEventListener('submit', handlerKeyWord)
-  const container = document.getElementById('pagination');
+  const container = document.getElementById('paginationLibrary');
   const options = {
     totalItems: 20,  
     itemsPerPage: 20,
@@ -23,6 +23,8 @@ function handlerLibray (event) {
   const page = paginationLibraly.getCurrentPage()
   console.log(page)
 
+  paginationLibraly.reset(100)
+  
   paginationLibraly.on('afterMove', ({page}) => {  
     console.log(page)
     // fetchCollection(page).then(data => renderCollection(data.results));
@@ -31,5 +33,5 @@ function handlerLibray (event) {
   // fetchCollection(page).then(({total_pages}) => {
   //   console.log(total_pages)
   //   paginationLibraly.reset(total_pages)})
-  paginationLibraly.reset(100)
+  
 }

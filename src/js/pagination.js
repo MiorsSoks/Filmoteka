@@ -44,11 +44,11 @@ async function fetchMoviePagination(value, page) {
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/search/movie?${API_KEY}&language=en-US&query=${value}&page=${page}&per_page=${PER_PAGE}&include_adult=false`);
     console.log(response)
-
+    errorText.classList.add("header-search__error-hidden")
   if (response.data.total_results !== 0) {
     return response.data
   } else {
-    errorText.classList.toggle("header-search__error-hidden")
+    errorText.classList.remove("header-search__error-hidden")
   }
     } catch (error) {
       console.error(error);
