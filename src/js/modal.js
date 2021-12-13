@@ -8,8 +8,8 @@ import { fetchFilmInfo } from './bring_film_info';
     back: document.querySelector('.backdrop'),
     m: document.querySelector('.container-wind'),
   };
-  // console.log(refs);
-  refs.openModalBtn.addEventListener('click', toggleModal);
+
+  refs.openModalBtn.addEventListener('click', onOpenModalClick);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   refs.m.addEventListener('click', e => {
@@ -18,11 +18,18 @@ import { fetchFilmInfo } from './bring_film_info';
 
   refs.back.addEventListener('click', toggleModal);
 
-  function toggleModal(event) {
+  function onOpenModalClick(event) {
     event.preventDefault();
+    if (event.target.tagName !== 'IMG') {
+      return;
+    }
+    toggleModal();
     fetchFilmInfo(event.target.id).then(data => {
       renderModalFilm(data);
     });
+  }
+
+  function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
 

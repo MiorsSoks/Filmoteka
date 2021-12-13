@@ -22,7 +22,7 @@ function createMarkupColl({
 }) {
   changeGenresIdsToNames(genre_ids);
   return `<li class="gallery-container__item">
-        <a href="" class="link gallery-art" data-modal-open>
+        <a href="" class="link gallery-art">
             <div class="film-img">
                             <picture>
                                 <source media="(min-width: 1024px)"
