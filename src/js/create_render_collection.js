@@ -18,10 +18,11 @@ function createMarkupColl({
   vote_average,
   first_air_date,
   name,
+  id,
 }) {
   changeGenresIdsToNames(genre_ids);
   return `<li class="gallery-container__item">
-        <a href="" class="link gallery-art" data-modal-open>
+        <a href="" class="link gallery-art">
             <div class="film-img">
                             <picture>
                                 <source media="(min-width: 1024px)"
@@ -49,11 +50,9 @@ function createMarkupColl({
     poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
   } 2x">
 
-                                <img class="poster" src="${
-                                  poster_path === null
-                                    ? noPosterImg
-                                    : BASE_IMG_URL + SIZE_IMG + poster_path
-                                }" alt="Poster of movie">
+                                <img class="poster" id='${id}' src="${
+    poster_path === null ? noPosterImg : BASE_IMG_URL + SIZE_IMG + poster_path
+  }" alt="Poster of movie">
                             </picture>
             </div>
  <div class="film-description">
