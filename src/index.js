@@ -6,8 +6,8 @@ import * as searchByKeyword from './js/search_by_keyword';
 import './js/up-btn';
 import './js/spinner';
 import './js/search_trend_collection';
-import "./js/markup-modal";
+import './js/markup-modal';
 import './js/dark-light-theme';
-import './js/add_to_library';
-import "./js/library-pagination";
-
+// import './js/add_to_library';
+import './js/library-pagination';
+import './js/btns_watched_queue';
