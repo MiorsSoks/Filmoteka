@@ -13,5 +13,5 @@ search_form.addEventListener('submit', e => {
 
   fetchMovie(value.trim()).then(data => {
     renderMarkup(data.results);
-  });
+  }).catch(console.log)
 });
