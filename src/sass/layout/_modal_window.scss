@@ -1,11 +1,13 @@
 .image_window {
   width: auto;
   height: 500px;
+  border-radius: 5px;
 }
 .modal_slesh {
   color: var(--text-modal);
 }
-.modal_icon, .close-btn {
+.modal_icon,
+.close-btn {
   width: 14px;
   height: 14px;
   right: 18px;
@@ -14,8 +16,7 @@
   color: #000000;
   cursor: pointer;
   z-index: 3;
-
-} 
+}
 .modal_icon {
   width: 14px;
   height: 14px;
@@ -81,7 +82,6 @@
   margin-bottom: 20px;
 }
 .wind_left {
-  
   font-family: var(--main-font);
   font-weight: Medium;
   line-height: 1.33;
@@ -94,7 +94,9 @@
   font-size: 12px;
 }
 
-.list_02, .list_03, .list_04 {
+.list_02,
+.list_03,
+.list_04 {
   color: var(--black);
 }
 .list_r01 {
@@ -208,8 +210,8 @@
   } */
   .wind_right {
     margin-left: 10px;
-      line-height: 1.33;
-      font-size: 10px;
+    line-height: 1.33;
+    font-size: 10px;
   }
   .wind_left {
     width: 264px;
@@ -226,10 +228,10 @@
   .list_02 {
     margin-left: 30px;
   }
-    .list_03 {
+  .list_03 {
     margin-left: 20px;
   }
-    .list_04 {
+  .list_04 {
     margin-left: 52px;
   }
   .image_window {
@@ -286,7 +288,8 @@
   .modal_btn_r {
     margin-left: 20px;
   }
-  .wind_right, .wind_left {
+  .wind_right,
+  .wind_left {
     font-size: 9px;
   }
   .list_r01,
