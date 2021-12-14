@@ -1,13 +1,13 @@
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
 import {renderCollection} from "./create_render_collection";
 
 const btnLibrary = document.querySelector(".header-link__library")
 console.log(btnLibrary)
-btnLibrary.addEventListener("click", handlerLibray)
+// btnLibrary.addEventListener("click", handlerLibray)
 
-function handlerLibray (event) {
-  search_form.removeEventListener('submit', handlerKeyWord)
+// function handlerLibray (event) {
+  // event.preventDefault()
+  // search_form.removeEventListener('submit', handlerKeyWord)
   const container = document.getElementById('paginationLibrary');
   const options = {
     totalItems: 20,  
@@ -23,7 +23,7 @@ function handlerLibray (event) {
   const page = paginationLibraly.getCurrentPage()
   console.log(page)
 
-  paginationLibraly.reset(100)
+  paginationLibraly.reset(50)
   
   paginationLibraly.on('afterMove', ({page}) => {  
     console.log(page)
@@ -34,4 +34,4 @@ function handlerLibray (event) {
   //   console.log(total_pages)
   //   paginationLibraly.reset(total_pages)})
   
-}
+// }

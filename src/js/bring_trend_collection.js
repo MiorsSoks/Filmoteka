@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
 import {renderCollection} from "./create_render_collection";
 
   const container = document.getElementById('pagination');

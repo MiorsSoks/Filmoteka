@@ -1,7 +1,7 @@
 //Ссылка на доки библиотеки  https://github.com/nhn/tui.pagination/blob/production/docs/getting-started.md
 import axios from 'axios';
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
+// import 'tui-pagination/dist/tui-pagination.css';
 import {renderCollection} from "./create_render_collection";
 
 const container = document.getElementById('pagination');
