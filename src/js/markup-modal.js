@@ -71,12 +71,3 @@ function createModalMarkup({
     </div>
   </div>`;
 }
-   // <ul class="list wind_right">
-            //     <li class="list_r01">
-            //         <div class="list_r1">${vote_average}</div>
-            //         <div class="modal_slesh">&nbsp; / &nbsp;</div>${vote_count}
-            //     </li>
-            //     <li class="list_r01">"${popularity}"</li>
-            //     <li class="list_02">"${original_title}"</li>
-            //     <li class="list_02">"${genresOfMovie}"</li>
-            // </ul>
