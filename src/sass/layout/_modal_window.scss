@@ -1,11 +1,7 @@
-.image_window {
-  width: auto;
-  height: 500px;
-}
 .modal_slesh {
   color: var(--text-modal);
 }
-.modal_icon, .close-btn {
+/* .modal_icon, .close-btn {
   width: 14px;
   height: 14px;
   right: 18px;
@@ -13,9 +9,7 @@
   position: absolute;
   color: #000000;
   cursor: pointer;
-  z-index: 3;
-
-} 
+} */
 .modal_icon {
   width: 14px;
   height: 14px;
@@ -41,32 +35,34 @@
   }
 }
 .container-wind {
-  position: absolute;
-  display: flex;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+
   width: 882px;
   height: 568px;
   background-color: #ffffff;
-  padding-left: 30px;
+
   padding-top: 50px;
   padding-bottom: 42px;
   padding-right: 30px;
   z-index: 2;
-  justify-content: space-between;
   // outline: 2px solid red;
 }
 
 .section_wind {
   width: 396px;
-  height: 477px;
-  // margin-left: 30px;
+  margin-left: 30px;
   font-family: var(--main-font);
   font-weight: Medium;
-  // object-fit: contain;
 }
-
 .list_wind {
   display: flex;
   font-size: 12px;
@@ -81,21 +77,22 @@
   margin-bottom: 20px;
 }
 .wind_left {
-  
   font-family: var(--main-font);
   font-weight: Medium;
   line-height: 1.33;
   color: var(--text-modal);
-  width: 395px;
+  width: 396px;
 }
 .list_l {
   margin-bottom: 10px;
   display: flex;
-  font-size: 12px;
 }
-
-.list_02, .list_03, .list_04 {
-  color: var(--black);
+.wind_right {
+  font-family: var(--main-font);
+  font-weight: Medium;
+  margin-left: 85px;
+  line-height: 1.17;
+  width: 107px;
 }
 .list_r01 {
   font-family: var(--main-font);
@@ -103,33 +100,24 @@
   display: flex;
   align-items: center;
 }
-.list_01 {
+.list_r1 {
   background-color: var(--orange-button);
   color: var(--white);
-  padding-left: 9px;
+  padding-left: 10px;
   padding-right: 9px;
-  padding-top: 2px;
-  padding-bottom: 0px;
+  padding-top: 1px;
+  // padding-bottom: 1px;
   border-radius: 5px;
-  margin-left: 40px;
-  // font-size: 12px;
 }
 .list_02 {
   font-family: var(--main-font);
   font-weight: Medium;
   line-height: 1.33;
-  margin-left: 50px;
 }
 .list_r01,
 .list_02 {
   color: var(--black);
-  // margin-bottom: 11px;
-}
-.list_03 {
-  margin-left: 38px;
-}
-.list_04 {
-  margin-left: 75px;
+  margin-bottom: 11px;
 }
 .modal_about {
   font-family: var(--main-font);
@@ -175,13 +163,12 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1023.9px) {
+@media screen and (max-width: 1023px) {
   .container-wind {
-    display: flex;
     width: 618px;
     height: 562px;
     background-color: #ffffff;
-    padding: 42px 28px 40px 28px;
+    padding: 42px 30px 40px 28px;
     z-index: 2;
   }
   .section_wind {
@@ -207,45 +194,18 @@
     color: #000000;
   } */
   .wind_right {
-    margin-left: 10px;
-      line-height: 1.33;
-      font-size: 10px;
-  }
-  .wind_left {
-    width: 264px;
-    line-height: 1.33;
-    font-size: 10px;
+    margin-left: 35px;
   }
   .modal_btn_r {
     margin-left: 30px;
   }
-  .list_01 {
-    margin-left: 20px;
-    font-size: 10px;
-  }
-  .list_02 {
-    margin-left: 30px;
-  }
-    .list_03 {
-    margin-left: 20px;
-  }
-    .list_04 {
-    margin-left: 52px;
-  }
-  .image_window {
-    width: 264px;
-    height: 373px;
-  }
-  .list_l {
-    font-size: 11px;
-  }
 }
 
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 767px) {
   .container-wind {
     display: block;
     width: 280px;
-    height: 958px;
+    // height: 990px;
     background-color: #ffffff;
     padding-top: 48px;
     padding-right: 20px;
@@ -274,36 +234,22 @@
   }
   .section_wind {
     margin-left: 0px;
-    width: 240px;
-    height: 357px;
   }
   .modal_wind {
     margin-top: 30px;
   }
+  /* .modal_icon, .close-btn {
+    width: 14px;
+    height: 14px;
+    right: 18px;
+    top: 18px;
+    position: absolute;
+    color: #000000;
+  } */
   .wind_right {
-    margin-left: 5px;
+    margin-left: 0px;
   }
   .modal_btn_r {
     margin-left: 20px;
-  }
-  .wind_right, .wind_left {
-    font-size: 9px;
-  }
-  .list_r01,
-  .list_02 {
-    // margin-bottom: 10px;
-  }
-  .list_04 {
-    margin-left: 48px;
-  }
-  .image_window {
-    width: 240px;
-    height: 356px;
-  }
-  .wind_left {
-    width: 240px;
-  }
-  .list_l {
-    font-size: 10px;
   }
 }
