@@ -70,6 +70,3 @@ function createMarkup({
         </a>
 </li>`;
 }
-{
-  /* ; */
-}
