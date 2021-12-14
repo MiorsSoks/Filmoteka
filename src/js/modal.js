@@ -22,20 +22,32 @@ import { fetchFilmInfo } from './bring_film_info';
 
   function onOpenModalClick(event) {
     event.preventDefault();
+
     if (event.target.parentNode.classList.contains('container')) {
       return;
     }
+
     console.log(refs.watchedBtn);
     console.log(refs.queueBtn);
     toggleModal();
     const id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
     fetchFilmInfo(id).then(data => {
       renderModalFilm(data);
+      const watched = document.querySelector('.add-to-watched');
+      console.log(watched);
+      watched.addEventListener('click', onWatchedBtnClick);
+      const queue = document.querySelector('.add-to-queue');
+      console.log(queue);
+      queue.addEventListener('click', onQueueBtnClik);
     });
   }
-  // console.log(refs.watchedBtn);
-  // console.log(refs.queueBtn);
 
+  function onWatchedBtnClick() {
+    console.log('Hello world');
+  }
+  function onQueueBtnClik() {
+    console.log('Its queue');
+  }
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
