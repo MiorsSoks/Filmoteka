@@ -9,5 +9,5 @@ import './js/search_trend_collection';
 import './js/markup-modal';
 import './js/dark-light-theme';
 // import './js/add_to_library';
-import './js/library-pagination';
+// import './js/library-pagination';
 import './js/btns_watched_queue';
