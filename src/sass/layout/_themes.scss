@@ -43,3 +43,19 @@
 .dark .film-name {
   color: var(--color-footer);
 }
+
+.header-form__film-name:hover,
+.header-form__film-name:focus {
+  border-bottom: 2px solid #ff6b01;
+}
+
+.material-icons-outlined:focus,
+.material-icons-outlined:hover {
+  transform: scale(2.3);
+  transition: calc(0.2s);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: gainsboro;
+}
