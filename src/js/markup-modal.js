@@ -51,20 +51,14 @@ function createModalMarkup({
         <h1 class="modal_wind">"${title}"</h1>
         <div class="list_wind">
             <ul class="list wind_left">
-                <li class="list_l">Vote / Votes</li>
-                <li class="list_l">Popularity</li>
-                <li class="list_l">Original Title</li>
-                <li class="list_l">Genre</li>
+                <li class="list_l">Vote / Votes<div class="list_01">${vote_average}</div>
+                <div class="modal_slesh">&nbsp; / &nbsp;</div><div class="list_r01">
+                    ${vote_count}</div></li>
+                <li class="list_l">Popularity<div class="list_02">"${popularity}"</div></li>
+                <li class="list_l">Original Title<div class="list_03">"${original_title}"</div></li>
+                <li class="list_l">Genre<div class="list_04">"${genresOfMovie}"</div></li>
             </ul>
-            <ul class="list wind_right">
-                <li class="list_r01">
-                    <div class="list_r1">${vote_average}</div>
-                    <div class="modal_slesh">&nbsp; / &nbsp;</div>${vote_count}
-                </li>
-                <li class="list_r01">"${popularity}"</li>
-                <li class="list_02">"${original_title}"</li>
-                <li class="list_02">"${genresOfMovie}"</li>
-            </ul>
+         
         </div>
 
 
@@ -77,3 +71,12 @@ function createModalMarkup({
     </div>
   </div>`;
 }
+   // <ul class="list wind_right">
+            //     <li class="list_r01">
+            //         <div class="list_r1">${vote_average}</div>
+            //         <div class="modal_slesh">&nbsp; / &nbsp;</div>${vote_count}
+            //     </li>
+            //     <li class="list_r01">"${popularity}"</li>
+            //     <li class="list_02">"${original_title}"</li>
+            //     <li class="list_02">"${genresOfMovie}"</li>
+            // </ul>
