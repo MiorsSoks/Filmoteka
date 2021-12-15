@@ -90,15 +90,18 @@ import Notiflix from 'notiflix';
 
   function getFilmInfo(e) {
     const children = e.target.parentNode.parentNode.children;
+    const date = e.target.parentNode.parentNode.dataset.date;
+    const genre = e.target.parentNode.parentNode.dataset.genre.split(',');
     const title = children[0].innerText;
-    const genre = children[1].querySelector('.list_04').innerText;
     const vote = children[1].querySelector('.list_01').innerText;
     const picture = e.target.parentNode.parentNode.parentNode.querySelector('.image_window').src;
     return {
       title,
-      genre,
-      vote,
-      picture,
+      genre_ids: genre,
+      vote_average: vote,
+      poster_path: picture,
+      id,
+      release_date: date,
     };
   }
 

@@ -75,7 +75,8 @@
 }
 
 .header-btn:hover,
-.header-btn:focus {
+.header-btn:focus,
+.header-btn.active {
   transition: 0.2s;
   background-color: var(--orange-button);
   border-color: var(--orange-button);
