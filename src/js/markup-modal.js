@@ -1,6 +1,8 @@
 // const backdrop = document.querySelector('.js-backdrop');
 // const modalWind = document.querySelector('.container-wind');
 // const modalWindElem = document.querySelector('ul.children');
+import { getQueueList, getWatchedList } from './watched';
+
 const modalW = document.querySelector('.container-wind'); //mw
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p';
@@ -23,11 +25,19 @@ function createModalMarkup({
   poster_path,
   overview,
   vote_count,
+  id,
 }) {
   const genresOfMovie = genres.map(genre => {
     return genre.name;
   });
+  const queueList = getQueueList();
+  let buttonWatched = 'add to Watched';
+  let buttonQueue = queueList.some(item => item[id]) ? 'remove queue' : 'add to queue';
+  const watchedList = getWatchedList();
 
+  if (watchedList.some(item => item[id])) {
+    buttonWatched = 'Remove watched';
+  }
   return `
  
 <div class="container-wind">
@@ -71,8 +81,8 @@ function createModalMarkup({
         <h2 class="modal_about">About</h2>
         <p class="modal_tex">"${overview}"</p>
       <div class="mw">
-  <button class="modal_btn_l modal_btn add-to-watched" id='watched' type="submit">add to Watched</button>
-  <button class="modal_btn_r modal_btn add-to-queue" type="submit">add to queue</button>
+  <button class="modal_btn_l modal_btn add-to-watched" id='watched' data-id=${id} type="submit">${buttonWatched}</button>
+  <button class="modal_btn_r modal_btn add-to-queue" type="submit" data-id=${id}>${buttonQueue}</button>
       </div>
     </div>
   </div>
