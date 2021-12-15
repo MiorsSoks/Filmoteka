@@ -1,5 +1,5 @@
 import { getQueueList, getWatchedList } from './watched';
-import { renderMarkup } from './create_markup';
+import { renderCollection } from './create_render_collection';
 
 window.addEventListener('load', () => onBtnClick('watched'));
 
@@ -45,5 +45,5 @@ function onBtnClick(type) {
     movies = getQueueList();
   }
   const changeMovies = movies.flatMap(item => Object.values(item));
-  renderMarkup(changeMovies);
+  renderCollection(changeMovies);
 }
