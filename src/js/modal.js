@@ -1,5 +1,7 @@
 import { renderModalFilm } from './markup-modal';
 import { fetchFilmInfo } from './bring_film_info';
+import { getQueueList, getWatchedList } from './watched';
+
 (() => {
   const refs = {
     openModalBtn: document.querySelector('.list.gallery-container'),
@@ -35,32 +37,71 @@ import { fetchFilmInfo } from './bring_film_info';
       console.log(watched);
       const queue = document.querySelectorAll('.add-to-queue');
       console.log(queue);
-
+      // queue.addEventListener('click', onQueueBtnClik);
       for (let i = 0; i < watched.length; i++) {
         watched[i].addEventListener('click', onWatchedBtnClick);
-        queue[i].addEventListener('click', onQueueBtnCliсk);
+        queue[i].addEventListener('click', onQueueBtnClik);
       }
     });
   }
 
-  let queueList = [];
-  let watchedList = [];
+  function onWatchedBtnClick(e) {
+    const filmInfo = getFilmInfo(e);
+    const id = e.target.dataset.id;
+    const key = { [id]: { ...filmInfo } };
+    const watchedList = getWatchedList();
 
-  function onWatchedBtnClick() {
-    console.log('Hello world');
-    watchedList.push(id);
+    if (watchedList.some(item => item[id])) {
+      const newwatchedList = watchedList.filter(item => !item[id]);
+      const parsedKey = JSON.stringify(newwatchedList);
+      localStorage.setItem('watchedList', parsedKey);
+      e.target.innerText = 'add to watched';
+    } else {
+      const parsedKey = JSON.stringify([...watchedList, key]);
+      localStorage.setItem('watchedList', parsedKey);
+      e.target.innerText = 'Remove watched';
+    }
   }
-  function onQueueBtnCliсk() {
-    console.log('Its queue');
-    queueList.push(id);
+
+  function onQueueBtnClik(e) {
+    const filmInfo = getFilmInfo(e);
+    const id = e.target.dataset.id;
+    const key = { [id]: { ...filmInfo } };
+    const queueList = getQueueList();
+
+    if (queueList.some(item => item[id])) {
+      const newQueueList = queueList.filter(item => !item[id]);
+      const parsedKey = JSON.stringify(newQueueList);
+      localStorage.setItem('queueList', parsedKey);
+      e.target.innerText = 'add to queue';
+    } else {
+      const parsedKey = JSON.stringify([...queueList, key]);
+      localStorage.setItem('queueList', parsedKey);
+      e.target.innerText = 'Remove queue';
+    }
+  }
+
+  //получаем свойства обьекта
+
+  function getFilmInfo(e) {
+    const children = e.target.parentNode.parentNode.children;
+    const title = children[0].innerText;
+    const genre = children[1].querySelector('.list_04').innerText;
+    const vote = children[1].querySelector('.list_01').innerText;
+    const picture = e.target.parentNode.parentNode.parentNode.querySelector('.image_window').src;
+    return {
+      title,
+      genre,
+      vote,
+      picture,
+    };
+
   }
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
 
-  console.log('queue', queueList);
-  console.log('watch', watchedList);
 
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
