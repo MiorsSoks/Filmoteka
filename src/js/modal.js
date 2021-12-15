@@ -112,12 +112,4 @@ import Notiflix from 'notiflix';
     }
   });
 
-  function checkQueueBtn(btn, id) {
-    // if (!localStorage.getItem('queueList')) return;
-    let queueList = JSON.parse(localStorage.getItem('queueList'));
-  }
-  function checkWatchedBtn(btn, id) {
-    if (!localStorage.getItem('watchedList')) return;
-    let watchedList = JSON.parse(localStorage.getItem('watchedList'));
-  }
 })();
