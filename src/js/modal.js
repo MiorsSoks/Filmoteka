@@ -1,6 +1,7 @@
 import { renderModalFilm } from './markup-modal';
 import { fetchFilmInfo } from './bring_film_info';
 import { getQueueList, getWatchedList } from './watched';
+import Notiflix from 'notiflix';
 
 (() => {
   const refs = {
@@ -56,9 +57,11 @@ import { getQueueList, getWatchedList } from './watched';
       const parsedKey = JSON.stringify(newwatchedList);
       localStorage.setItem('watchedList', parsedKey);
       e.target.innerText = 'add to watched';
+      Notiflix.Notify.success(`❌ The movie has been removed from the watched list`);
     } else {
       const parsedKey = JSON.stringify([...watchedList, key]);
       localStorage.setItem('watchedList', parsedKey);
+      Notiflix.Notify.success(`✅  DONE! The movie has been added to the watched list`);
       e.target.innerText = 'Remove watched';
     }
   }
@@ -73,10 +76,12 @@ import { getQueueList, getWatchedList } from './watched';
       const newQueueList = queueList.filter(item => !item[id]);
       const parsedKey = JSON.stringify(newQueueList);
       localStorage.setItem('queueList', parsedKey);
+      Notiflix.Notify.success(`❌ The movie has been removed from the queue list`);
       e.target.innerText = 'add to queue';
     } else {
       const parsedKey = JSON.stringify([...queueList, key]);
       localStorage.setItem('queueList', parsedKey);
+      Notiflix.Notify.success(`✅ DONE! The movie has been added to the queue list`);
       e.target.innerText = 'Remove queue';
     }
   }
@@ -95,13 +100,11 @@ import { getQueueList, getWatchedList } from './watched';
       vote,
       picture,
     };
-
   }
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
-
 
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
