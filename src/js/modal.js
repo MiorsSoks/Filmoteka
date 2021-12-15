@@ -7,12 +7,8 @@ import { fetchFilmInfo } from './bring_film_info';
     modal: document.querySelector('[data-modal]'),
     back: document.querySelector('.backdrop'),
     m: document.querySelector('.container-wind'),
-    watchedBtn: document.querySelector('.add-to-watched'),
-    queueBtn: document.querySelector('.add-to-queue'),
   };
 
-  // let watched;
-  // console.log(watched);
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -22,30 +18,27 @@ import { fetchFilmInfo } from './bring_film_info';
 
   refs.back.addEventListener('click', toggleModal);
 
-  let id = "";
+  let id = '';
   function onOpenModalClick(event) {
     event.preventDefault();
 
     if (event.target.parentNode.classList.contains('container')) {
       return;
     }
-
-    console.log(refs.watchedBtn);
-    console.log(refs.queueBtn);
     toggleModal();
     id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
-    console.log("id", id)
+    console.log('id', id);
     fetchFilmInfo(id).then(data => {
-      console.log("data", data.id)
+      console.log('data', data.id);
       renderModalFilm(data);
       const watched = document.querySelectorAll('.add-to-watched');
       console.log(watched);
       const queue = document.querySelectorAll('.add-to-queue');
       console.log(queue);
-      // queue.addEventListener('click', onQueueBtnClik);
-      for (let i = 0; i < watched.length; i++) {        
+
+      for (let i = 0; i < watched.length; i++) {
         watched[i].addEventListener('click', onWatchedBtnClick);
-        queue[i].addEventListener('click', onQueueBtnClik)
+        queue[i].addEventListener('click', onQueueBtnCliсk);
       }
     });
   }
@@ -55,27 +48,25 @@ import { fetchFilmInfo } from './bring_film_info';
 
   function onWatchedBtnClick() {
     console.log('Hello world');
-    watchedList.push(id)
+    watchedList.push(id);
   }
-  function onQueueBtnClik() {
+  function onQueueBtnCliсk() {
     console.log('Its queue');
-    queueList.push(id)
+    queueList.push(id);
   }
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
 
-  console.log("queue", queueList)
-  console.log("watch", watchedList)
+  console.log('queue', queueList);
+  console.log('watch', watchedList);
 
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       refs.modal.classList.add('is-hidden');
     }
   });
-
-
 
   function checkQueueBtn(btn, id) {
     // if (!localStorage.getItem('queueList')) return;
