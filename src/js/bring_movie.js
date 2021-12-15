@@ -8,11 +8,10 @@ export async function fetchMovie(value) {
       `https://api.themoviedb.org/3/search/movie?api_key=3b94c1b54af7d429587ecf26a37007c0&language=en-US&query=${value}&page=1&include_adult=false`,
     );
 
-    if (response.data.total_pages === 0) {
-      button_search.setAttribute('disabled', true);
-      return;
-    }
-
+    // if (response.data.total_pages === 0) {
+    //   button_search.setAttribute('disabled', true);
+    //   return;
+    // }
     return response.data;
   } catch (error) {
     console.error(error);
