@@ -9,8 +9,6 @@ import { getQueueList, getWatchedList } from './watched';
     modal: document.querySelector('[data-modal]'),
     back: document.querySelector('.backdrop'),
     m: document.querySelector('.container-wind'),
-    watchedBtn: document.querySelector('.add-to-watched'),
-    queueBtn: document.querySelector('.add-to-queue'),
   };
 
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
@@ -29,9 +27,6 @@ import { getQueueList, getWatchedList } from './watched';
     if (event.target.parentNode.classList.contains('container')) {
       return;
     }
-
-    console.log(refs.watchedBtn);
-    console.log(refs.queueBtn);
     toggleModal();
     id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
     console.log('id', id);
@@ -100,11 +95,13 @@ import { getQueueList, getWatchedList } from './watched';
       vote,
       picture,
     };
+
   }
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
+
 
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
