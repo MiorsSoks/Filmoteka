@@ -1,6 +1,7 @@
 import { renderModalFilm } from './markup-modal';
 import { fetchFilmInfo } from './bring_film_info';
 import { getQueueList, getWatchedList } from './watched';
+import { renderCollection } from './create_render_collection';
 import Notiflix from 'notiflix';
 
 (() => {
@@ -10,6 +11,7 @@ import Notiflix from 'notiflix';
     modal: document.querySelector('[data-modal]'),
     back: document.querySelector('.backdrop'),
     m: document.querySelector('.container-wind'),
+    galleryLibraryList: document.querySelector('.library-container'),
   };
 
   refs.openModalBtn.addEventListener('click', onOpenModalClick);
@@ -30,15 +32,10 @@ import Notiflix from 'notiflix';
     }
     toggleModal();
     id = event.path.find(item => item.tagName === 'A').querySelector('img').id;
-    console.log('id', id);
     fetchFilmInfo(id).then(data => {
-      console.log('data', data.id);
       renderModalFilm(data);
       const watched = document.querySelectorAll('.add-to-watched');
-      console.log(watched);
       const queue = document.querySelectorAll('.add-to-queue');
-      console.log(queue);
-      // queue.addEventListener('click', onQueueBtnClik);
       for (let i = 0; i < watched.length; i++) {
         watched[i].addEventListener('click', onWatchedBtnClick);
         queue[i].addEventListener('click', onQueueBtnClik);
@@ -58,6 +55,12 @@ import Notiflix from 'notiflix';
       localStorage.setItem('watchedList', parsedKey);
       e.target.innerText = 'add to watched';
       Notiflix.Notify.success(`❌ The movie has been removed from the watched list`);
+      if (refs.galleryLibraryList !== null) {
+        const newArrayOfMovies = JSON.parse(parsedKey);
+        const normalObjects = newArrayOfMovies.flatMap(item => Object.values(item));
+        refs.galleryLibraryList.innerHTML = '';
+        renderCollection(normalObjects);
+      }
     } else {
       const parsedKey = JSON.stringify([...watchedList, key]);
       localStorage.setItem('watchedList', parsedKey);
@@ -78,6 +81,12 @@ import Notiflix from 'notiflix';
       localStorage.setItem('queueList', parsedKey);
       Notiflix.Notify.success(`❌ The movie has been removed from the queue list`);
       e.target.innerText = 'add to queue';
+      if (refs.galleryLibraryList !== null) {
+        const newArrayOfMovies = JSON.parse(parsedKey);
+        const normalObjects = newArrayOfMovies.flatMap(item => Object.values(item));
+        refs.galleryLibraryList.innerHTML = '';
+        renderCollection(normalObjects);
+      }
     } else {
       const parsedKey = JSON.stringify([...queueList, key]);
       localStorage.setItem('queueList', parsedKey);
@@ -114,5 +123,8 @@ import Notiflix from 'notiflix';
       refs.modal.classList.add('is-hidden');
     }
   });
-
 })();
+
+Notiflix.Notify.init({
+  position: 'right-bottom',
+});

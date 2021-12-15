@@ -10,7 +10,7 @@ export function renderCollection(movies) {
   return (filmList.innerHTML = markup);
 }
 
-function createMarkupColl({
+export function createMarkupColl({
   poster_path,
   title,
   genre_ids,
@@ -21,6 +21,7 @@ function createMarkupColl({
   id,
 }) {
   changeGenresIdsToNames(genre_ids);
+
   return `<li class="gallery-container__item">
         <a href="" class="link gallery-art">
             <div class="film-img">

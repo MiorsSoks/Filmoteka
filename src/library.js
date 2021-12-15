@@ -7,4 +7,4 @@ import './js/watched';
 import './js/markup-modal';
 import './js/dark-light-theme';
 import './js/render_library';
-
+import './js/getGenresNames';
