@@ -19,6 +19,7 @@ function createMarkup({
   name,
   id,
 }) {
+  console.log(genre_ids);
   changeGenresIdsToNames(genre_ids);
   return `<li class="gallery-container__item">
         <a href="" class="link gallery-art">

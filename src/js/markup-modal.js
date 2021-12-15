@@ -26,10 +26,12 @@ function createModalMarkup({
   overview,
   vote_count,
   id,
+  release_date,
 }) {
   const genresOfMovie = genres.map(genre => {
     return genre.name;
   });
+  const getGenresId = genres.map(item => item.id);
   const queueList = getQueueList();
   let buttonWatched = 'add to Watched';
   let buttonQueue = queueList.some(item => item[id]) ? 'remove queue' : 'add to queue';
@@ -63,7 +65,7 @@ function createModalMarkup({
             }" class="image_window" alt="картинка з фільму" />
         </picture>
     </div>
-    <div class="section_wind">
+    <div class="section_wind" data-date=${release_date} data-genre=${getGenresId.join(',')}>
         <h1 class="modal_wind">"${title}"</h1>
         <div class="list_wind">
             <ul class="list wind_left">
