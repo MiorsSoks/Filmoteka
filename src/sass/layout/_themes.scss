@@ -15,7 +15,7 @@
 .theme {
   position: absolute;
   top: 190px;
-  right: 220px;
+  right: 20vw;
 }
 
 .dark .footer-section {
@@ -58,4 +58,13 @@
 .header-link:hover,
 .header-link:focus {
   color: gainsboro;
+}
+
+.library-emty {
+  justify-content: center;
+  height: 30vh;
+  display: flex;
+  width: 100%;
+  font-size: 28px;
+  pointer-events: none;
 }
