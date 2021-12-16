@@ -44,6 +44,12 @@ function onBtnClick(type) {
   } else if (type === 'queue') {
     movies = getQueueList();
   }
+
+  if (movies.length === 0) {
+    galleryList.innerHTML = `<li class='library-emty'>There are no added films yet.</li>`;
+    return;
+  }
+
   const changeMovies = movies.flatMap(item => Object.values(item));
   renderCollection(changeMovies);
 }

@@ -59,6 +59,10 @@ import Notiflix from 'notiflix';
         const newArrayOfMovies = JSON.parse(parsedKey);
         const normalObjects = newArrayOfMovies.flatMap(item => Object.values(item));
         refs.galleryLibraryList.innerHTML = '';
+        if (normalObjects.length === 0) {
+          refs.galleryLibraryList.innerHTML = `<li class='library-emty'>There are no added films yet.</li>`;
+          return;
+        }
         renderCollection(normalObjects);
       }
     } else {
@@ -85,6 +89,10 @@ import Notiflix from 'notiflix';
         const newArrayOfMovies = JSON.parse(parsedKey);
         const normalObjects = newArrayOfMovies.flatMap(item => Object.values(item));
         refs.galleryLibraryList.innerHTML = '';
+        if (normalObjects.length === 0) {
+          refs.galleryLibraryList.innerHTML = `<li class='library-emty'>There are no added films yet.</li>`;
+          return;
+        }
         renderCollection(normalObjects);
       }
     } else {
@@ -94,8 +102,6 @@ import Notiflix from 'notiflix';
       e.target.innerText = 'Remove queue';
     }
   }
-
-  //получаем свойства обьекта
 
   function getFilmInfo(e) {
     const children = e.target.parentNode.parentNode.children;
